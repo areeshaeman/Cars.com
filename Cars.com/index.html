@@ -1,322 +1,478 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Premium Car Rental</title>
     <link rel="stylesheet" href="./assets/css/style.css" />
-</head>
+  </head>
 
-<body>
-    <!-- navbar -->
-<header class="navbar">
-  <div class="nav">
-    <div class="logo">Cars.com</div>
-
-    <!-- Hamburger Icon -->
-    <div class="menu-toggle" id="menu-toggle">
-      <span></span>
-      <span></span>
-      <span></span>
+  <body>
+    <!-- loader -->
+    <div id="pre-load" class="loader">
+      <div class="loader-inner">
+        <div class="loader-logo">  
+          <svg
+            viewBox="0 -0.5 25 25"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g
+              id="SVGRepo_tracerCarrier"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            ></g>
+            <g id="SVGRepo_iconCarrier">
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M16.5 12L13 14.333V19L20 14.333V9.667L13 5V9.667L16.5 12Z"
+                stroke="#ffffff"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></path>
+              <path
+                d="M6.41598 9.04293C6.07132 8.81319 5.60568 8.90635 5.37593 9.25102C5.14619 9.59568 5.23935 10.0613 5.58402 10.2911L6.41598 9.04293ZM12.584 14.9571C12.9287 15.1868 13.3943 15.0936 13.6241 14.749C13.8538 14.4043 13.7606 13.9387 13.416 13.7089L12.584 14.9571ZM6.75 9.667C6.75 9.25279 6.41421 8.917 6 8.917C5.58579 8.917 5.25 9.25279 5.25 9.667H6.75ZM5.25 14.333C5.25 14.7472 5.58579 15.083 6 15.083C6.41421 15.083 6.75 14.7472 6.75 14.333H5.25ZM5.58395 9.04298C5.23932 9.27275 5.1462 9.73841 5.37598 10.083C5.60575 10.4277 6.07141 10.5208 6.41605 10.291L5.58395 9.04298ZM13.416 5.62402C13.7607 5.39425 13.8538 4.92859 13.624 4.58395C13.3942 4.23932 12.9286 4.1462 12.584 4.37598L13.416 5.62402ZM13.416 10.2911C13.7606 10.0613 13.8538 9.59568 13.6241 9.25102C13.3943 8.90635 12.9287 8.81319 12.584 9.04293L13.416 10.2911ZM5.58402 13.7089C5.23935 13.9387 5.14619 14.4043 5.37593 14.749C5.60568 15.0936 6.07132 15.1868 6.41598 14.9571L5.58402 13.7089ZM6.41605 13.709C6.07141 13.4792 5.60575 13.5723 5.37598 13.917C5.1462 14.2616 5.23932 14.7272 5.58395 14.957L6.41605 13.709ZM12.584 19.624C12.9286 19.8538 13.3942 19.7607 13.624 19.416C13.8538 19.0714 13.7607 18.6058 13.416 18.376L12.584 19.624ZM20.416 10.2911C20.7606 10.0613 20.8538 9.59568 20.6241 9.25102C20.3943 8.90635 19.9287 8.81319 19.584 9.04293L20.416 10.2911ZM16.5 12L16.084 11.3759C15.8753 11.515 15.75 11.7492 15.75 12C15.75 12.2508 15.8753 12.485 16.084 12.6241L16.5 12ZM19.584 14.9571C19.9287 15.1868 20.3943 15.0936 20.6241 14.749C20.8538 14.4043 20.7606 13.9387 20.416 13.7089L19.584 14.9571ZM5.58402 10.2911L12.584 14.9571L13.416 13.7089L6.41598 9.04293L5.58402 10.2911ZM5.25 9.667V14.333H6.75V9.667H5.25ZM6.41605 10.291L13.416 5.62402L12.584 4.37598L5.58395 9.04298L6.41605 10.291ZM12.584 9.04293L5.58402 13.7089L6.41598 14.9571L13.416 10.2911L12.584 9.04293ZM5.58395 14.957L12.584 19.624L13.416 18.376L6.41605 13.709L5.58395 14.957ZM19.584 9.04293L16.084 11.3759L16.916 12.6241L20.416 10.2911L19.584 9.04293ZM16.084 12.6241L19.584 14.9571L20.416 13.7089L16.916 11.3759L16.084 12.6241Z"
+                fill="#ffffff"
+              ></path>
+            </g>
+          </svg>
+        </div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+      </div>
     </div>
+    <!-- navbar -->
+    <header class="navbar">
+      <div class="nav">
+        <div class="logo">Cars.com</div>
 
-    <nav class="nav-links" id="nav-links">
-      <a href="#about">About Us</a>
-      <a href="#cars">Cars</a>
-      <a href="#catagories">Categories</a>
-      <a href="#contact">Contact</a>
-      <button class="btn">Login</button>
-    </nav>
-  </div>
-</header>
+        <!-- Hamburger Icon -->
+        <div class="menu-toggle" id="menu-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <nav class="nav-links" id="nav-links">
+          <a href="#about">About Us</a>
+          <a href="#cars">Cars</a>
+          <a href="#catagories">Categories</a>
+          <a href="#contact">Contact</a>
+          <button class="btn">Login</button>
+        </nav>
+      </div>
+    </header>
     <!-- section 1 -->
     <section class="hero">
-        <div class="text-content">
-            <h1>Drive Your Dream Car Today</h1>
-            <p>Discover luxury, performance, and comfort — all in one place. Choose from the world’s best car brands and
-                experience driving like never before.</p>
-        </div>
+      <div class="text-content">
+        <h1>Drive Your Dream Car Today</h1>
+        <p>
+          Discover luxury, performance, and comfort — all in one place. Choose
+          from the world’s best car brands and experience driving like never
+          before.
+        </p>
+      </div>
 
-        <div class="car-image">
-            <img src="https://pngimg.com/uploads/porsche/porsche_PNG10611.png" alt="Luxury Car" />
-        </div>
+      <div class="car-image">
+        <img
+          src="https://pngimg.com/uploads/porsche/porsche_PNG10611.png"
+          alt="Luxury Car"
+        />
+      </div>
     </section>
     <!-- section 2 -->
 
     <section class="brands">
-        <div class="brand-carousel">
-            <div class="brand-track">
+      <div class="brand-carousel">
+        <div class="brand-track">
+          <img
+            src="./assets/media/Lamborghini-Logo-1998.png"
+            alt="Lamborghini"
+          />
+          <img
+            src="./assets/media/pngimg.com - tesla_logo_PNG22.png"
+            alt="Tesla"
+          />
+          <img src="./assets/media/porshe.webp" alt="Porsche" />
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/9/90/Mercedes-Logo.svg"
+            alt="Mercedes"
+          />
+          <img
+            src="./assets/media/Lexus-Logo-Download-Free-PNG.png"
+            alt="Lexus"
+          />
+          <img
+            src="./assets/media/ferrari-brand-logo-car-symbol-design-italian-automobile-illustration-free-vector.jpg"
+            alt="Ferrari"
+          />
 
-                <img src="./assets/media/Lamborghini-Logo-1998.png" alt="Lamborghini" />
-                <img src="./assets/media/pngimg.com - tesla_logo_PNG22.png" alt="Tesla" />
-                <img src="./assets/media/porshe.webp" alt="Porsche" />
-                <img src="https://upload.wikimedia.org/wikipedia/commons/9/90/Mercedes-Logo.svg" alt="Mercedes" />
-                <img src="./assets/media/Lexus-Logo-Download-Free-PNG.png" alt="Lexus" />
-                <img src="./assets/media/ferrari-brand-logo-car-symbol-design-italian-automobile-illustration-free-vector.jpg"
-                    alt="Ferrari" />
-
-
-                <img src="./assets/media/Lamborghini-Logo-1998.png" alt="Lamborghini" />
-                <img src="./assets/media/pngimg.com - tesla_logo_PNG22.png" alt="Tesla" />
-                <img src="./assets/media/porshe.webp" alt="Porsche" />
-                <img src="https://upload.wikimedia.org/wikipedia/commons/9/90/Mercedes-Logo.svg" alt="Mercedes" />
-                <img src="./assets/media/Lexus-Logo-Download-Free-PNG.png" alt="Lexus" />
-                <img src="./assets/media/ferrari-brand-logo-car-symbol-design-italian-automobile-illustration-free-vector.jpg"
-                    alt="Ferrari" />
-            </div>
+          <img
+            src="./assets/media/Lamborghini-Logo-1998.png"
+            alt="Lamborghini"
+          />
+          <img
+            src="./assets/media/pngimg.com - tesla_logo_PNG22.png"
+            alt="Tesla"
+          />
+          <img src="./assets/media/porshe.webp" alt="Porsche" />
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/9/90/Mercedes-Logo.svg"
+            alt="Mercedes"
+          />
+          <img
+            src="./assets/media/Lexus-Logo-Download-Free-PNG.png"
+            alt="Lexus"
+          />
+          <img
+            src="./assets/media/ferrari-brand-logo-car-symbol-design-italian-automobile-illustration-free-vector.jpg"
+            alt="Ferrari"
+          />
         </div>
+      </div>
     </section>
     <!-- section 3 -->
 
-    <section class="car-showcase"  id="cars">
-        <h2 class="section-title">Choose Your Dream Car</h2>
+    <section class="car-showcase" id="cars">
+      <h2 class="section-title">Choose Your Dream Car</h2>
 
-        <div class="car-card">
-            <div class="car-image">
-                <img id="car-img" src="https://i.pinimg.com/736x/43/b0/14/43b014fc18e696040841e9532593c9fb.jpg"
-                    alt="porsche" />
-            </div>
-
-            <div class="car-info">
-                <h3 id="car-name">Porsche Model S</h3>
-                <p id="car-desc">
-                    A blend of performance and innovation — with electric power and cutting-edge technology.
-                </p>
-
-                <div class="car-features" id="car-features">
-                    <div><strong>Top Speed:</strong> 250 km/h</div>
-                    <div><strong>Range:</strong> 600 km</div>
-                    <div><strong>0–100 km/h:</strong> 2.5s</div>
-                </div>
-
-                <div class="color-options">
-                    <div class="color-btn red"
-                        data-img="https://i.pinimg.com/1200x/e2/77/89/e27789b77fff5394cb3b02faf715ebb0.jpg"></div>
-                    <div class="color-btn black"
-                        data-img="https://i.pinimg.com/1200x/9e/7e/40/9e7e4052d44d34661708690f629d205f.jpg"></div>
-                    <div class="color-btn white"
-                        data-img="https://i.pinimg.com/736x/e4/36/a7/e436a705e3ff3165d1fc943ef0cbb629.jpg"></div>
-                </div>
-            </div>
+      <div class="car-card">
+        <div class="car-image">
+          <img
+            id="car-img"
+            src="https://i.pinimg.com/736x/43/b0/14/43b014fc18e696040841e9532593c9fb.jpg"
+            alt="porsche"
+          />
         </div>
 
-        <div class="car-selector">
-            <button class="select-btn active" data-car="tesla">Tesla</button>
-            <button class="select-btn" data-car="bmw">BMW</button>
-            <button class="select-btn" data-car="lamborghini">Lamborghini</button>
+        <div class="car-info">
+          <h3 id="car-name">Porsche Model S</h3>
+          <p id="car-desc">
+            A blend of performance and innovation — with electric power and
+            cutting-edge technology.
+          </p>
+
+          <div class="car-features" id="car-features">
+            <div><strong>Top Speed:</strong> 250 km/h</div>
+            <div><strong>Range:</strong> 600 km</div>
+            <div><strong>0–100 km/h:</strong> 2.5s</div>
+          </div>
+
+          <div class="color-options">
+            <div
+              class="color-btn red"
+              data-img="https://i.pinimg.com/1200x/e2/77/89/e27789b77fff5394cb3b02faf715ebb0.jpg"
+            ></div>
+            <div
+              class="color-btn black"
+              data-img="https://i.pinimg.com/1200x/9e/7e/40/9e7e4052d44d34661708690f629d205f.jpg"
+            ></div>
+            <div
+              class="color-btn white"
+              data-img="https://i.pinimg.com/736x/e4/36/a7/e436a705e3ff3165d1fc943ef0cbb629.jpg"
+            ></div>
+          </div>
         </div>
+      </div>
+
+      <div class="car-selector">
+        <button class="select-btn active" data-car="tesla">Tesla</button>
+        <button class="select-btn" data-car="bmw">BMW</button>
+        <button class="select-btn" data-car="lamborghini">Lamborghini</button>
+      </div>
     </section>
 
     <!-- section 4-->
 
     <section class="heroa">
-        <video autoplay muted loop playsinline class="bg-video">
-            <source src="./assets/media/From KlickPin CF Audi Logo Animation Tutorial.mp4 " type="video/mp4" />
-        </video>
+      <video autoplay muted loop playsinline class="bg-video">
+        <source
+          src="./assets/media/From KlickPin CF Audi Logo Animation Tutorial.mp4 "
+          type="video/mp4"
+        />
+      </video>
 
-        <div class="overlay"></div>
+      <div class="overlay"></div>
     </section>
 
     <!-- section 5 -->
 
-    <section class="car-portfolio"   id="about">
-        <div class="portfolio-text">
-            <h2>Redefining the Future of Premium Mobility</h2>
-            <p>
-                At Unique Motors, we believe that driving is more than just transportation — it’s an experience.
-                With a curated collection of the world’s finest vehicles, we deliver the perfect blend of luxury,
-                performance, and innovation.
-            </p>
-            <button class="view-btn">See More Cars</button>
+    <section class="car-portfolio" id="about">
+      <div class="portfolio-text">
+        <h2>Redefining the Future of Premium Mobility</h2>
+        <p>
+          At Unique Motors, we believe that driving is more than just
+          transportation — it’s an experience. With a curated collection of the
+          world’s finest vehicles, we deliver the perfect blend of luxury,
+          performance, and innovation.
+        </p>
+        <button class="view-btn">See More Cars</button>
+      </div>
+
+      <div class="portfolio-grid">
+        <div class="portfolio-item">
+          <img
+            src="https://i.pinimg.com/1200x/ae/ab/f3/aeabf3db3cae2d105785a1c3473fedd8.jpg"
+            alt="Tesla Model S"
+          />
+          <div class="overlay">Tesla Model S</div>
         </div>
 
-        <div class="portfolio-grid">
-            <div class="portfolio-item">
-                <img src="https://i.pinimg.com/1200x/ae/ab/f3/aeabf3db3cae2d105785a1c3473fedd8.jpg"
-                    alt="Tesla Model S" />
-                <div class="overlay">Tesla Model S</div>
-            </div>
-
-            <div class="portfolio-item">
-                <img src="https://i.pinimg.com/1200x/f0/46/d9/f046d97558e58cbecb3ae3d3d82714b6.jpg"
-                    alt="Lamborghini Huracán" />
-                <div class="overlay">Lamborghini Huracán</div>
-            </div>
-
-            <div class="portfolio-item">
-                <img src="https://i.pinimg.com/1200x/b8/11/61/b81161de57ea29d6969b42584822c480.jpg" alt="BMW M8" />
-                <div class="overlay">BMW M8 Competition</div>
-            </div>
-
-            <div class="portfolio-item">
-                <img src="https://i.pinimg.com/736x/11/96/9e/11969e16f7c8458b5f8cab001cbc6a86.jpg"
-                    alt="Porsche 911 Turbo S" />
-                <div class="overlay">Porsche 911 Turbo S</div>
-            </div>
+        <div class="portfolio-item">
+          <img
+            src="https://i.pinimg.com/1200x/f0/46/d9/f046d97558e58cbecb3ae3d3d82714b6.jpg"
+            alt="Lamborghini Huracán"
+          />
+          <div class="overlay">Lamborghini Huracán</div>
         </div>
+
+        <div class="portfolio-item">
+          <img
+            src="https://i.pinimg.com/1200x/b8/11/61/b81161de57ea29d6969b42584822c480.jpg"
+            alt="BMW M8"
+          />
+          <div class="overlay">BMW M8 Competition</div>
+        </div>
+
+        <div class="portfolio-item">
+          <img
+            src="https://i.pinimg.com/736x/11/96/9e/11969e16f7c8458b5f8cab001cbc6a86.jpg"
+            alt="Porsche 911 Turbo S"
+          />
+          <div class="overlay">Porsche 911 Turbo S</div>
+        </div>
+      </div>
     </section>
-<!-- section 6 -->
-<section class="cars-explore-section"   id="catagories">
-  <div class="cars-header">
-    <h2> Explore Cars</h2>
-    <p>Find your dream car from our exclusive collection of premium and electric vehicles.</p>
-  </div>
-  <div class="cars-filter-bar">
-    <button class="cars-filter-btn active" data-filter="all">All</button>
-    <button class="cars-filter-btn" data-filter="tesla">Tesla</button>
-    <button class="cars-filter-btn" data-filter="bmw">BMW</button>
-    <button class="cars-filter-btn" data-filter="lamborghini">Lamborghini</button>
-    <button class="cars-filter-btn" data-filter="porsche">Porsche</button>
-  </div>
-
-  <div class="cars-grid-wrapper">
-    <div class="car-item tesla">
-      <img src="https://i.pinimg.com/1200x/fc/61/76/fc6176d61f5bcf164663386a36910766.jpg" alt="Tesla Model S">
-      <h3>Tesla Model S</h3>
-      <p>Electric • Autopilot • 396 mi Range</p>
-      <span class="car-price">$129,000</span>
-      <button class="car-view-btn" data-car="Tesla Model S">View Details</button>
-    </div>
-
-    <div class="car-item bmw">
-      <img src="https://i.pinimg.com/1200x/bf/36/b3/bf36b3ed39f9e86c5a78cfa64c4fc61e.jpg" alt="BMW M8 Coupe">
-      <h3>BMW M8 Coupe</h3>
-      <p>Sport • 617 HP • Twin-Turbo V8</p>
-      <span class="car-price">$135,000</span>
-      <button class="car-view-btn" data-car="BMW M8 Coupe">View Details</button>
-    </div>
-
-    <div class="car-item lamborghini">
-      <img src=" https://i.pinimg.com/736x/3d/29/a0/3d29a082fd1c1d1e952a1b94a05ef119.jpg" alt="Lamborghini Huracan EVO">
-      <h3>Lamborghini Huracán EVO</h3>
-      <p>Supercar • 640 HP • 5.2L V10</p>
-      <span class="car-price">$249,000</span>
-      <button class="car-view-btn" data-car="Lamborghini Huracán EVO">View Details</button>
-    </div>
-
-    <div class="car-item porsche">
-      <img src="https://i.pinimg.com/1200x/cd/e9/3b/cde93b8e8e8b30067b78c95dc7e40f87.jpg" alt="Porsche 911 Turbo S">
-      <h3>Porsche 911 Turbo S</h3>
-      <p>Performance • AWD • 640 HP</p>
-      <span class="car-price">$205,000</span>
-      <button class="car-view-btn" data-car="Porsche 911 Turbo S">View Details</button>
-    </div>
-  </div>
-
-  <!-- Modal -->
-  <div class="car-modal" id="carModal">
-    <div class="car-modal-content">
-      <span class="car-modal-close">&times;</span>
-      <h2 id="carTitle">Car Details</h2>
-      <p id="carInfo">Loading details...</p>
-    </div>
-  </div>
-</section>
-
-<!-- testimonials page -->
-
-<section class="testimonials">
-  <div class="testimonial-header">
-    <h2>What Our Customers Say</h2>
-    <p>Read feedback from our satisfied clients who enjoyed our premium car rentals.</p>
-  </div>
-
-  <div class="testimonial-container">
-    <div class="testimonial-card">
-      <p>"Renting a Lamborghini through Unique Cars was a dream come true. The process was smooth and the car was immaculate!"</p>
-      <div class="customer-info">
-        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="John Doe">
-        <h4>John Doe</h4>
-        <span>Entrepreneur</span>
+    <!-- section 6 -->
+    <section class="cars-explore-section" id="catagories">
+      <div class="cars-header">
+        <h2>Explore Cars</h2>
+        <p>
+          Find your dream car from our exclusive collection of premium and
+          electric vehicles.
+        </p>
       </div>
-    </div>
-
-    <div class="testimonial-card">
-      <p>"The Tesla Model S I rented was perfect for my business trip. Great service, fast delivery, and premium cars!"</p>
-      <div class="customer-info">
-        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Jane Smith">
-        <h4>Jane Smith</h4>
-        <span>Software Engineer</span>
+      <div class="cars-filter-bar">
+        <button class="cars-filter-btn active" data-filter="all">All</button>
+        <button class="cars-filter-btn" data-filter="tesla">Tesla</button>
+        <button class="cars-filter-btn" data-filter="bmw">BMW</button>
+        <button class="cars-filter-btn" data-filter="lamborghini">
+          Lamborghini
+        </button>
+        <button class="cars-filter-btn" data-filter="porsche">Porsche</button>
       </div>
-    </div>
 
-    <div class="testimonial-card">
-      <p>"Exceptional experience! From BMW to Porsche, the variety and quality are unmatched. Highly recommend Unique Cars."</p>
-      <div class="customer-info">
-        <img src="https://randomuser.me/api/portraits/men/76.jpg" alt="Michael Lee">
-        <h4>Michael Lee</h4>
-        <span>Photographer</span>
+      <div class="cars-grid-wrapper">
+        <div class="car-item tesla">
+          <img
+            src="https://i.pinimg.com/1200x/fc/61/76/fc6176d61f5bcf164663386a36910766.jpg"
+            alt="Tesla Model S"
+          />
+          <h3>Tesla Model S</h3>
+          <p>Electric • Autopilot • 396 mi Range</p>
+          <span class="car-price">$129,000</span>
+          <button class="car-view-btn" data-car="Tesla Model S">
+            View Details
+          </button>
+        </div>
+
+        <div class="car-item bmw">
+          <img
+            src="https://i.pinimg.com/1200x/bf/36/b3/bf36b3ed39f9e86c5a78cfa64c4fc61e.jpg"
+            alt="BMW M8 Coupe"
+          />
+          <h3>BMW M8 Coupe</h3>
+          <p>Sport • 617 HP • Twin-Turbo V8</p>
+          <span class="car-price">$135,000</span>
+          <button class="car-view-btn" data-car="BMW M8 Coupe">
+            View Details
+          </button>
+        </div>
+
+        <div class="car-item lamborghini">
+          <img
+            src=" https://i.pinimg.com/736x/3d/29/a0/3d29a082fd1c1d1e952a1b94a05ef119.jpg"
+            alt="Lamborghini Huracan EVO"
+          />
+          <h3>Lamborghini Huracán EVO</h3>
+          <p>Supercar • 640 HP • 5.2L V10</p>
+          <span class="car-price">$249,000</span>
+          <button class="car-view-btn" data-car="Lamborghini Huracán EVO">
+            View Details
+          </button>
+        </div>
+
+        <div class="car-item porsche">
+          <img
+            src="https://i.pinimg.com/1200x/cd/e9/3b/cde93b8e8e8b30067b78c95dc7e40f87.jpg"
+            alt="Porsche 911 Turbo S"
+          />
+          <h3>Porsche 911 Turbo S</h3>
+          <p>Performance • AWD • 640 HP</p>
+          <span class="car-price">$205,000</span>
+          <button class="car-view-btn" data-car="Porsche 911 Turbo S">
+            View Details
+          </button>
+        </div>
       </div>
-    </div>
-  </div>
-</section>
 
-<!-- contact section -->
-
-<section class="contact"  id="contact">
-  <div class="contact-container">
-    <div class="contact-info">
-      <h2>Contact Us</h2>
-      <p>Have questions or want to book a car? Reach out to us!</p>
-      <ul>
-        <li><strong>Address:</strong> 123 Luxury St, New York, NY</li>
-        <li><strong>Phone:</strong> +1 234 567 890</li>
-        <li><strong>Email:</strong> info@cars.com</li>
-      </ul>
-    </div>
-
-    <form class="contact-form" id="contactForm">
-      <input type="text" name="name" placeholder="Your Name" required />
-      <input type="email" name="email" placeholder="Your Email" required />
-      <input type="text" name="subject" placeholder="Subject" required />
-      <textarea name="message" placeholder="Message" required></textarea>
-      <button type="submit" class="btn">Send Message</button>
-    </form>
-  </div>
-</section>
-<!-- footer -->
-<footer class="footer">
-  <div class="footer-container">
-    <div class="footer-about">
-      <div class="logo">Cars.com</div>
-      <p>Premium car rental service providing luxury and electric cars for every occasion.</p>
-    </div>
-
-    <div class="footer-links">
-      <h3>Quick Links</h3>
-      <ul>
-        <li><a href="#">About Us</a></li>
-        <li><a href="#">Cars</a></li>
-        <li><a href="#">Features</a></li>
-        <li><a href="#">Help</a></li>
-      </ul>
-    </div>
-    <div class="footer-contact">
-      <h3>Contact</h3>
-      <ul>
-        <li>123 Luxury St, New York, NY</li>
-        <li>+1 234 567 890</li>
-        <li>info@uniquecars.com</li>
-      </ul>
-    </div>
-    <div class="footer-social">
-      <h3>Follow Us</h3>
-      <div class="social-icons">
-        <a href="#"><img src="https://img.icons8.com/ios-filled/50/ffffff/facebook.png" alt="Facebook"/></a>
-        <a href="#"><img src="https://img.icons8.com/ios-filled/50/ffffff/instagram-new.png" alt="Instagram"/></a>
-        <a href="#"><img src="https://img.icons8.com/ios-filled/50/ffffff/twitter.png" alt="Twitter"/></a>
-        <a href="#"><img src="https://img.icons8.com/ios-filled/50/ffffff/linkedin.png" alt="LinkedIn"/></a>
+      <!-- Modal -->
+      <div class="car-modal" id="carModal">
+        <div class="car-modal-content">
+          <span class="car-modal-close">&times;</span>
+          <h2 id="carTitle">Car Details</h2>
+          <p id="carInfo">Loading details...</p>
+        </div>
       </div>
-    </div>
-  </div>
+    </section>
 
-  <div class="footer-bottom">
-    <p>© 2025 Unique Cars. All rights reserved.</p>
-  </div>
-</footer>
-<script src="./script.js"></script>
-</body>
+    <!-- testimonials page -->
 
+    <section class="testimonials">
+      <div class="testimonial-header">
+        <h2>What Our Customers Say</h2>
+        <p>
+          Read feedback from our satisfied clients who enjoyed our premium car
+          rentals.
+        </p>
+      </div>
 
+      <div class="testimonial-container">
+        <div class="testimonial-card">
+          <p>
+            "Renting a Lamborghini through Unique Cars was a dream come true.
+            The process was smooth and the car was immaculate!"
+          </p>
+          <div class="customer-info">
+            <img
+              src="https://randomuser.me/api/portraits/men/32.jpg"
+              alt="John Doe"
+            />
+            <h4>John Doe</h4>
+            <span>Entrepreneur</span>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <p>
+            "The Tesla Model S I rented was perfect for my business trip. Great
+            service, fast delivery, and premium cars!"
+          </p>
+          <div class="customer-info">
+            <img
+              src="https://randomuser.me/api/portraits/women/44.jpg"
+              alt="Jane Smith"
+            />
+            <h4>Jane Smith</h4>
+            <span>Software Engineer</span>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <p>
+            "Exceptional experience! From BMW to Porsche, the variety and
+            quality are unmatched. Highly recommend Unique Cars."
+          </p>
+          <div class="customer-info">
+            <img
+              src="https://randomuser.me/api/portraits/men/76.jpg"
+              alt="Michael Lee"
+            />
+            <h4>Michael Lee</h4>
+            <span>Photographer</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- contact section -->
+
+    <section class="contact" id="contact">
+      <div class="contact-container">
+        <div class="contact-info">
+          <h2>Contact Us</h2>
+          <p>Have questions or want to book a car? Reach out to us!</p>
+          <ul>
+            <li><strong>Address:</strong> 123 Luxury St, New York, NY</li>
+            <li><strong>Phone:</strong> +1 234 567 890</li>
+            <li><strong>Email:</strong> info@cars.com</li>
+          </ul>
+        </div>
+
+        <form class="contact-form" id="contactForm">
+          <input type="text" name="name" placeholder="Your Name" required />
+          <input type="email" name="email" placeholder="Your Email" required />
+          <input type="text" name="subject" placeholder="Subject" required />
+          <textarea name="message" placeholder="Message" required></textarea>
+          <button type="submit" class="btn">Send Message</button>
+        </form>
+      </div>
+    </section>
+    <!-- footer -->
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-about">
+          <div class="logo">Cars.com</div>
+          <p>
+            Premium car rental service providing luxury and electric cars for
+            every occasion.
+          </p>
+        </div>
+
+        <div class="footer-links">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Cars</a></li>
+            <li><a href="#">Features</a></li>
+            <li><a href="#">Help</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h3>Contact</h3>
+          <ul>
+            <li>123 Luxury St, New York, NY</li>
+            <li>+1 234 567 890</li>
+            <li>info@uniquecars.com</li>
+          </ul>
+        </div>
+        <div class="footer-social">
+          <h3>Follow Us</h3>
+          <div class="social-icons">
+            <a href="#"
+              ><img
+                src="https://img.icons8.com/ios-filled/50/ffffff/facebook.png"
+                alt="Facebook"
+            /></a>
+            <a href="#"
+              ><img
+                src="https://img.icons8.com/ios-filled/50/ffffff/instagram-new.png"
+                alt="Instagram"
+            /></a>
+            <a href="#"
+              ><img
+                src="https://img.icons8.com/ios-filled/50/ffffff/twitter.png"
+                alt="Twitter"
+            /></a>
+            <a href="#"
+              ><img
+                src="https://img.icons8.com/ios-filled/50/ffffff/linkedin.png"
+                alt="LinkedIn"
+            /></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2025 Unique Cars. All rights reserved.</p>
+      </div>
+    </footer>
+    <script src="./script.js"></script>
+  </body>
 </html>
