@@ -1,3 +1,10 @@
+const menuToggle = document.getElementById("menu-toggle");
+const navLinks = document.getElementById("nav-links");
+
+menuToggle.addEventListener("click", () => {
+  menuToggle.classList.toggle("active");
+  navLinks.classList.toggle("active");
+});
 // section 1
 window.addEventListener("scroll", () => {
   const hero = document.querySelector(".hero");
@@ -221,3 +228,4 @@ setInterval(() => {
   current = (current + 1) % testimonials.length;
   showTestimonial(current);
 }, 5000);
+
