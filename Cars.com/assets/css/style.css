@@ -4,21 +4,6 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
-html {
-  scroll-behavior: smooth;
-}
-body {
-  background-color: #fff;
-  color: #000;
-  overflow-x: hidden;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
-}
 
 html {
   scroll-behavior: smooth;
@@ -29,7 +14,106 @@ body {
   color: #000;
   overflow-x: hidden;
 }
-
+/* loader */
+ #pre-load{
+     background:#000;
+     position:fixed;
+     inset:0;
+     display:flex;
+     align-items:center;
+     justify-content:center;
+     z-index:999999 
+}
+ #pre-load .loader-inner{
+     --loader-background:linear-gradient(0deg,rgba(50,50,50,.2) 0%,rgba(100,100,100,.2) 100%);
+     position:relative;
+     height:250px;
+     aspect-ratio:1;
+     display:flex;
+     align-items:center;
+     justify-content:center 
+}
+ #pre-load .loader-inner .loader-logo{
+     position:absolute;
+     top:50%;
+     left:50%;
+     transform:translate(-50%,-50%);
+     width:60px;
+     height:60px;
+     display:flex;
+     align-items:center;
+     justify-content:center;
+     animation:color-change 2s infinite ease-in-out;
+     z-index:999 
+}
+ #pre-load .loader-inner .loader-logo svg{
+    width:100%;
+    height:100%
+}
+ #pre-load .loader-inner .box{
+     position:absolute;
+     background:var(--loader-background);
+     border-radius:50%;
+     border-top:1px solid rgb(100,100,100);
+     box-shadow:rgba(0,0,0,.3) 0 10px 10px 0;
+     backdrop-filter:blur(5px);
+     animation:ripple 2s infinite ease-in-out 
+}
+ #pre-load .loader-inner .box:nth-child(1){
+    width:25%;
+    aspect-ratio:1/1;
+    z-index:99
+}
+ #pre-load .loader-inner .box:nth-child(2){
+    inset:30%;
+    z-index:98;
+    border-color:rgba(100,100,100,.8);
+    animation-delay:.2s
+}
+ #pre-load .loader-inner .box:nth-child(3){
+    inset:20%;
+    z-index:97;
+    border-color:rgba(100,100,100,.6);
+    animation-delay:.4s
+}
+ #pre-load .loader-inner .box:nth-child(4){
+    inset:10%;
+    z-index:96;
+    border-color:rgba(100,100,100,.4);
+    animation-delay:.6s
+}
+ #pre-load .loader-inner .box:nth-child(5){
+    inset:0;
+    z-index:95;
+    border-color:rgba(100,100,100,.2);
+    animation-delay:.8s
+}
+ @keyframes ripple{
+     0%{
+        transform:scale(1);
+        box-shadow:rgba(0,0,0,.3) 0 10px 10px 0
+    }
+     50%{
+        transform:scale(1.3);
+        box-shadow:rgba(0,0,0,.3) 0 30px 20px 0
+    }
+     100%{
+        transform:scale(1);
+        box-shadow:rgba(0,0,0,.3) 0 10px 10px 0
+    }
+}
+ @keyframes color-change{
+     0%{
+        opacity:.7
+    }
+     50%{
+        opacity:1
+    }
+     100%{
+        opacity:.7
+    }
+}
+ 
 /* ===== NAVBAR ===== */
 .navbar {
   width: 100%;
@@ -143,6 +227,7 @@ body {
     transform: rotate(-45deg) translate(5px, -5px);
   }
 }
+
 /************** section 1 *************/
 .hero {
   height: 100vh;
@@ -190,6 +275,38 @@ body {
     transform: translateY(0);
   }
 }
+/* responsiveness */
+@media (max-width: 780px) {
+  .hero {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: auto; 
+    padding: 40px 20px;
+  }
+
+  .text-content, .car-image {
+    max-width: 100%;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .text-content h1 {
+    font-size: 2rem;
+  }
+
+  .text-content p {
+    font-size: 0.95rem;
+  }
+
+  .car-image {
+    max-width: 100%;
+  }
+}
+
+
 /************** section 2 *************/
 .brands {
   width: 100%;
@@ -373,18 +490,74 @@ body {
   background: #ff2d55;
 }
 
+@media (max-width: 992px) {
+  .car-card {
+    gap: 40px;
+  }
+
+  .car-info {
+    max-width: 90%;
+  }
+}
+
+/* ✅ Mobile screens */
 @media (max-width: 768px) {
   .car-card {
     flex-direction: column;
+    gap: 30px;
   }
 
   .car-image img {
     width: 90%;
+    max-width: 350px;
   }
 
   .car-info {
     text-align: center;
+    padding: 0 10px;
   }
+
+  .car-features {
+    text-align: center;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .car-showcase {
+    padding: 40px 20px;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+  }
+
+  .car-image img {
+    max-width: 100%;
+  }
+
+  .select-btn {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+}
+@media  (min-width:320px){
+  .car-selector {
+ 
+  gap: 5px;
+ }
+
+ .select-btn {
+  background: #000;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+ }
+
 }
 
 /************** section 4 *************/
@@ -984,4 +1157,3 @@ body {
     justify-content: center;
   }
 }
-
