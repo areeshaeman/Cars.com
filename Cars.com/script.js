@@ -1,3 +1,21 @@
+// loader
+window.addEventListener("load", () => {
+  const loader = document.getElementById("pre-load");
+  const content = document.getElementById("main-content");
+
+  setTimeout(() => {
+    loader.style.opacity = "0";
+    loader.style.transition = "opacity 0.5s ease";
+
+    setTimeout(() => {
+      loader.style.display = "none";
+      content.style.display = "block";
+      content.classList.add("show");
+    }, 500);
+  }, 3000);
+});
+
+// navbar
 const menuToggle = document.getElementById("menu-toggle");
 const navLinks = document.getElementById("nav-links");
 
@@ -228,4 +246,3 @@ setInterval(() => {
   current = (current + 1) % testimonials.length;
   showTestimonial(current);
 }, 5000);
-
